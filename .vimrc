@@ -268,6 +268,7 @@ map 0 ^
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
+  %s#\($\n\s*\)\+\%$##
   exe "normal `z"
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
