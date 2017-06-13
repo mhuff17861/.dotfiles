@@ -105,3 +105,4 @@ done
 alias cd='pushd'
 alias p='popd'
 alias dirs='dirs -v'
+alias dd='dd status=progress'
