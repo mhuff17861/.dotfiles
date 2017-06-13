@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/Jose/.oh-my-zsh
+  export ZSH=/home/andrew/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -83,25 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export http_proxy="http://saj3fh:jrsv032794@10.224.200.25:8080/"
-export ftp_proxy=$http_proxy
-export https_proxy=$http_proxy
-export FTP_PROXY=$http_proxy
-export HTTP_PROXY=$http_proxy
-export HTTPS_PROXY=$http_proxy
-
-export COM="/home/demodev/wrk/sys/com"
-
-export PATH="~/bin:/usr/local/bin:/bin:/usr/bin:/usr/ucb"
-export PATH="~/wrk/sys/bin:$PATH:/sbin:/usr/sbin:~/wrk/bin"
-PATH="/usr/local/bin:$PATH"
-PATH=$(perl -e 'print join ":", grep {!$h{$_}++} split ":", $ENV{PATH}')
-
-for i in {bash-functions,bash-aliases,gl-aliases}
-do
-	. /home/Jose/$i
-done
-
+alias ls='ls --color=auto'
 alias cd='pushd'
 alias p='popd'
 alias dirs='dirs -v'
