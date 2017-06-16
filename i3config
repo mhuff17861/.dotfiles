@@ -296,7 +296,7 @@ bindsym $mod+Shift+w exec feh --recursive --randomize --bg-fill /home/xendev/Pic
 
 exec unity-settings-daemon &
 exec nm-applet &
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/rodrigo/Pictures/Wallpapers
+exec --no-startup-id feh --recursive --randomize --bg-fill /home/andrew/Pictures/Wallpapers
 
 for_window [title="Write:.*" class="Thunderbird"] floating enable
 for_window [class="Franz"] floating enable
