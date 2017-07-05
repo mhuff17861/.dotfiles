@@ -84,7 +84,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --color=auto'
-alias cd='pushd'
-alias p='popd'
 alias dirs='dirs -v'
 alias dd='dd status=progress'
