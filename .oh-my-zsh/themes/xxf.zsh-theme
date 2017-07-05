@@ -13,7 +13,7 @@ function box_name {
 
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
-local history_info='$(var=$(history | tail -n1 | sed -e "s/^  //" -e "s| .*$||"); var=$((var+1)); echo $var)'
+local history_info='$(var=$(history | tail -n1 | sed -e "s/^\s*//" -e "s/\s.*//"); var=$((var+1)); echo $var)'
 
 # VCS
 YS_VCS_PROMPT_PREFIX1="%{$fg[white]%}on%{$reset_color%} "
