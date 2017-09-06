@@ -97,5 +97,5 @@ function vim() {
         fi
     done
 
-    /usr/local/bin/vim -p "${args[@]}"
+    /usr/bin/vim -p "${args[@]}"
 }
