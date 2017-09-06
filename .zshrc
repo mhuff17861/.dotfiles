@@ -86,3 +86,16 @@ source $ZSH/oh-my-zsh.sh
 alias ls='ls --color=auto'
 alias dirs='dirs -v'
 alias dd='dd status=progress'
+
+function vim() {
+    args=()
+    for i in $@; do
+        if [[ -h $i ]]; then
+            args+=`readlink $i`
+        else
+            args+=$i
+        fi
+    done
+
+    /usr/local/bin/vim -p "${args[@]}"
+}
