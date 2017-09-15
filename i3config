@@ -265,14 +265,29 @@ bar {
 		mode hide
 }
 
+# Set shutdown, restart, and locking features
+bindsym $mod+0 mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+	bindsym l exec --no-startup-id i3exit lock, mode "default"
+	bindsym s exec --no-startup-id i3exit suspend, mode "default"
+	bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+	bindsym e exec --no-startup-id i3exit logout, mode "default"
+	bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+	bindsym r exec --no-startup-id i3exit reboot, mode "default"
+	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+	# exit system mode: "Enter" or "Escape"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
 # gaps inner 75
 # gaps outer 100
 
 # lock
 # bindsym Control+Mod1+l exec lock -g -f Roboto-Mono-Medium-for-Powerline
-bindsym Control+Mod1+l exec i3lock -c 000000
-# lock and sleep
-# bindsym Control+Mod1+s exec systemctl suspend && lock
+bindsym $mod+9 exec i3lock -c 000000
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 2 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 2 -5% #decrease sound volume
@@ -291,8 +306,6 @@ for_window [title="Google Keep"] floating enable
 for_window [title="Google Play Music"] floating enable
 bindsym $mod+Shift+m exec google-chrome --app='https://play.google.com/music/listen?hl=en&tab=wY&u=0#/home'
 bindsym $mod+Shift+p exec google-chrome --app='https://www.radiojavan.com/'
-
-bindsym $mod+Shift+w exec feh --recursive --randomize --bg-fill /home/xendev/Pictures/Wallpapers
 
 exec unity-settings-daemon &
 exec nm-applet &
