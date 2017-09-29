@@ -260,13 +260,12 @@ au BufNewFile,BufRead *.html
     \ set shiftwidth=2
 
 " Highlight unecessary whitespace
-highlight UnwanttedTab ctermbg=red guibg=darkred
-highlight TrailSpace guibg=red ctermbg=darkred
-match UnwanttedTab /\t/
-match TrailSpace / \+$/
-
-autocmd ColorScheme * highlight UnwanttedTab ctermbg=red guibg=darkred
-autocmd ColorScheme * highlight TrailSpace guibg=red ctermbg=darkred
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 set ai "Auto indent
 set si "Smart indent
@@ -315,9 +314,6 @@ endtry
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" Remap VIM 0 to first non-blank character
-map 0 ^
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
