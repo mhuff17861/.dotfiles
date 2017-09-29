@@ -15,6 +15,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'lervag/vimtex'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'commentary.vim'
@@ -22,8 +24,10 @@ Plugin 'ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-coffee-script'
 Plugin 'Syntastic'
+Plugin 'nvie/vim-flake8'
 Plugin 'mru.vim'
 Plugin 'scrooloose/nerdTree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'maxbrunsfeld/vim-yankstack'
 
 " All of your Plugins must be added before the following line
@@ -62,6 +66,9 @@ set t_Co=256
 if has("syntax")
   syntax on
 endif
+
+" Python highlighting
+let python_highlight_all=1
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -156,6 +163,24 @@ inoremap $q ''<esc>i
 inoremap $e ""<esc>i
 inoremap $i <esc>I\item <esc>A
 
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" python with virtualenv support
+" Doesn't work for some reason
+"py << EOF
+"  import os
+"  import sys
+"  if 'VIRTUAL_ENV' in os.environ:
+"    project_base_dir = os.environ['VIRTUAL_ENV']
+"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"    execfile(activate_this, dict(__file__=activate_this))
+"EOF
+
+" ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -177,6 +202,8 @@ set timeout ttimeoutlen=50
 
 let mapleader = ","
 let g:mapleader = ","
+
+set encoding=utf-8
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -206,12 +233,40 @@ set noswapfile
 " Use spaces instead of tabs
 set noexpandtab
 
-" Be smart when using tabs ;)
+" Be smart when using tabs
 set smarttab
 
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+" Access system clipboard
+set clipboard=unnamed
+
+" python PEP8 indentation standards
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" HTML Indentation
+au BufNewFile,BufRead *.html
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
+
+" Highlight unecessary whitespace
+highlight UnwanttedTab ctermbg=red guibg=darkred
+highlight TrailSpace guibg=red ctermbg=darkred
+match UnwanttedTab /\t/
+match TrailSpace / \+$/
+
+autocmd ColorScheme * highlight UnwanttedTab ctermbg=red guibg=darkred
+autocmd ColorScheme * highlight TrailSpace guibg=red ctermbg=darkred
 
 set ai "Auto indent
 set si "Smart indent
@@ -284,6 +339,13 @@ map <leader>s? z=
 
 set path=.,,**
 
-colorscheme lucario
+" Sublime-like colorscheme
+colorscheme molokai
 
-" source /etc/vim/cscope_maps.vim
+" Other colorscheme setting
+"if has('gui_running')
+"  set background=dark
+"  colorscheme solarized
+"else
+"  colorscheme zenburn
+"endif
