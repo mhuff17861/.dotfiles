@@ -210,6 +210,14 @@ set so=7
 " sudo save to avoid permission denied
 command W w !sudo tee % > /dev/null
 
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " Always show current position
 set ruler
 

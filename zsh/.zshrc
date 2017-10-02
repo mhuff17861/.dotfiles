@@ -99,3 +99,5 @@ function vim() {
 
     /usr/bin/vim -p "${args[@]}"
 }
+
+source ~/.pfile
