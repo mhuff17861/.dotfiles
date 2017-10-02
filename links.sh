@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script creates the necessary symlinks so that all of the config files
+# can be found in the right place without them being separate from the repo.
 
 # vim
 ln -sf ~/git/dotfiles/vim/.vimrc ~/.vimrc
