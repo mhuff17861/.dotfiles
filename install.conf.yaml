@@ -5,8 +5,11 @@
 - clean: ['~']
 
 - link:
+    ~/.zshenv: zshenv
+    ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-    ~/.oh-my-zsh: oh-my-zsh
+    ~/.zpreztorc: zpreztorc
+    ~/.zprezto: prezto
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
@@ -14,4 +17,6 @@
     ~/.config/i3/config: i3config
 
 - shell:
+  - mkdir -p ~/.config/i3
   - [git submodule update --init --recursive, Installing submodules]
+  - ./fonts/install.sh
