@@ -207,6 +207,7 @@ set encoding=utf-8
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
+
 " sudo save to avoid permission denied
 command W w !sudo tee % > /dev/null
 
@@ -326,8 +327,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"
-  %s/\s\+$//ge
-  %s#\($\n\s*\)\+\%$##
+  %s/\s\+$//e
   exe "normal `z"
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
