@@ -295,7 +295,7 @@ function prompt_garrett_setup {
   else
 
     # Set colors.
-    eval prompt_garrett_color_user=${1:-'${green}'}
+    eval prompt_garrett_color_user=${1:-'${yellow}'}
     eval prompt_garrett_color_host=${1:-'${green}'}
     eval prompt_garrett_color_prompt=${1:-'${grey}'}
 
