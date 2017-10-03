@@ -15,7 +15,6 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.config/i3/config: i3config
-    ~/.zprezto/modules/prompt/functions/prompt_garrett_setup: prezto-themes/prompt_garrett_setup
 
 - shell:
   - mkdir -p ~/.config/i3
