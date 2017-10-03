@@ -4,6 +4,12 @@
 
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - mkdir -p ~/.config/i3
+  - ./packages.sh
+  - ./fonts/install.sh
+
 - link:
     ~/.zshenv: zshenv
     ~/.zprofile: zprofile
@@ -15,9 +21,3 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.config/i3/config: i3config
-
-- shell:
-  - mkdir -p ~/.config/i3
-  - ~/.dotfiles/packages.sh
-  - [git submodule update --init --recursive, Installing submodules]
-  - ./fonts/install.sh
