@@ -18,5 +18,6 @@
 
 - shell:
   - mkdir -p ~/.config/i3
+  - ~/.dotfiles/packages.sh
   - [git submodule update --init --recursive, Installing submodules]
   - ./fonts/install.sh
