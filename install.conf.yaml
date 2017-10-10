@@ -7,7 +7,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
-  - ./packages.sh
+  - sudo ./packages.sh
   - ./fonts/install.sh
 
 - link:
