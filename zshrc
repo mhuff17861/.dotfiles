@@ -20,3 +20,5 @@ function vim() {
 
     /usr/bin/vim -p "${args[@]}"
 }
+
+export EDITOR='vim'
