@@ -6,6 +6,7 @@ sudo apt-get install \
 	git \
 	i3 i3-wm i3lock i3status \
 	python-pip python-setuptools \
+	terminator \
 	vim \
 	zsh
 
