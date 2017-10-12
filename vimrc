@@ -30,6 +30,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'raimondi/delimitmate'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line

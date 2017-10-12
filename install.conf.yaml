@@ -21,3 +21,6 @@
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.config/i3/config: i3config
+
+- shell:
+  - vim +PluginInstall +qall
