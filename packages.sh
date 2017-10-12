@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo apt-get install \
+sudo apt-get -y install \
+	conky-all \
 	feh \
 	gem \
 	git \

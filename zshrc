@@ -25,3 +25,4 @@ function vim() {
 }
 
 export EDITOR='vim'
+bindkey -v
