@@ -9,7 +9,7 @@ alias la='ls -la --color=auto'
 alias dirs='dirs -v'
 alias dd='dd status=progress'
 alias tmux='TERM=screen-256color-bce tmux'
-alias tmux_main='tmux attach -t main || tmux new -s main'
+alias c='clear'
 
 function vim() {
     args=()
