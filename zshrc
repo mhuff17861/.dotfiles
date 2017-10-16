@@ -27,22 +27,12 @@ if ! zgen saved; then
 	zgen save
 fi
 
-if [ -e ~/.dircolors ]; then
-	eval `dircolors ~/.dircolors`
-fi
-
-
 # Remove `nvm` from BULLETTRAIN_PROMPT_ORDER, since it only works if node/nvm
 # are installed, and I don't have much need for this, see:
 #
 #   - https://github.com/caiogondim/bullet-train.zsh/issues/192
 #
 BULLETTRAIN_PROMPT_ORDER=($(echo ${BULLETTRAIN_PROMPT_ORDER[@]/#%nvm}))
-
-# Source Prezto.
-#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-#fi
 
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
