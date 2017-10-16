@@ -11,10 +11,6 @@
   - ./fonts/install.sh
 
 - link:
-    #~/.zshenv: zshenv
-    #~/.zprofile: zprofile
-    #~/.zpreztorc: zpreztorc
-    #~/.zprezto: prezto
     ~/.zgen: zgen
     ~/.zshrc:
       force: true
