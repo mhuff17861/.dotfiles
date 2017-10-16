@@ -2,10 +2,12 @@
 
 sudo apt-get -y install \
 	conky-all \
+	curl \
 	feh \
 	gem \
 	git \
 	i3 i3-wm i3lock i3status \
+	jq \
 	python-pip python-setuptools \
 	terminator \
 	vim \

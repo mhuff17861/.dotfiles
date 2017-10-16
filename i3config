@@ -97,6 +97,32 @@ bindsym $mod+a focus parent
 #
 bindsym $mod+Shift+i exec i3-input
 
+set $base00 #181818
+set $base01 #282828
+set $base02 #383838
+set $base03 #585858
+set $base04 #b8b8b8
+set $base05 #d8d8d8
+set $base06 #e8e8e8
+set $base07 #f8f8f8
+set $base08 #ab4642
+set $base09 #dc9656
+set $base0A #f7ca88
+set $base0B #a1b56c
+set $base0C #86c1b9
+set $base0D #7cafc2
+set $base0E #ba8baf
+set $base0F #a16946
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0D
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
+
 #Name the workspace
 set $tag1 "1"
 set $tag2 "2"
@@ -217,6 +243,7 @@ for_window [class="^.*"] border pixel 0
 #     bindsym Return mode "default"
 #     bindsym Escape mode "default"
 # }
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -224,6 +251,18 @@ bar {
         status_command i3status
         tray_output primary
 		mode hide
+		colors {
+			background $base00
+			separator  $base01
+			statusline $base04
+
+            # State             Border  BG      Text
+			focused_workspace   $base05 $base0D $base00
+			active_workspace    $base05 $base03 $base00
+			inactive_workspace  $base03 $base01 $base05
+			urgent_workspace    $base08 $base08 $base00
+			binding_mode        $base00 $base0A $base00
+	}
 }
 
 # Set shutdown, restart, and locking features
@@ -231,16 +270,16 @@ bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
 	bindsym l exec --no-startup-id i3exit lock, mode "default"
-	bindsym s exec --no-startup-id i3exit suspend, mode "default"
-	bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-	bindsym e exec --no-startup-id i3exit logout, mode "default"
-	bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-	bindsym r exec --no-startup-id i3exit reboot, mode "default"
-	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+		bindsym s exec --no-startup-id i3exit suspend, mode "default"
+		bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+		bindsym e exec --no-startup-id i3exit logout, mode "default"
+		bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+		bindsym r exec --no-startup-id i3exit reboot, mode "default"
+		bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
-	# exit system mode: "Enter" or "Escape"
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+# exit system mode: "Enter" or "Escape"
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 
 # gaps inner 75
@@ -271,6 +310,7 @@ bindsym $mod+Shift+p exec google-chrome --app='https://www.radiojavan.com/'
 exec unity-settings-daemon &
 exec nm-applet &
 exec --no-startup-id feh --recursive --randomize --bg-fill /home/andrew/Pictures/Wallpapers
+exec --no-startup-id conky &
 
 for_window [title="Write:.*" class="Thunderbird"] floating enable
 for_window [class="Franz"] floating enable

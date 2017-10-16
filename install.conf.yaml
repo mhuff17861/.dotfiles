@@ -11,11 +11,15 @@
   - ./fonts/install.sh
 
 - link:
-    ~/.zshenv: zshenv
-    ~/.zprofile: zprofile
-    ~/.zshrc: zshrc
-    ~/.zpreztorc: zpreztorc
-    ~/.zprezto: prezto
+    #~/.zshenv: zshenv
+    #~/.zprofile: zprofile
+    #~/.zpreztorc: zpreztorc
+    #~/.zprezto: prezto
+    ~/.zgen: zgen
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.dircolors: dircolors
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
