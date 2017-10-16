@@ -19,7 +19,6 @@
     ~/.zshrc:
       force: true
       path: zshrc
-    ~/.dircolors: dircolors
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
