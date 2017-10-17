@@ -1,4 +1,3 @@
-source ~/.pfile
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
