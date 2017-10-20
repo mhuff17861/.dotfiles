@@ -1,6 +1,9 @@
 - defaults:
     link:
       relink: true
+      force: true
+    shell:
+      stdout: true
 
 - clean: ['~']
 
@@ -12,9 +15,7 @@
 
 - link:
     ~/.zgen: zgen
-    ~/.zshrc:
-      force: true
-      path: zshrc
+    ~/.zshrc: zshrc
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
@@ -23,3 +24,4 @@
 
 - shell:
   - vim +PluginInstall +qall
+  - ./vim/bundle/YouCompleteMe/install.py --clang-completer
