@@ -9,8 +9,10 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage itself
 Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
