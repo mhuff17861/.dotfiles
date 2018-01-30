@@ -17,6 +17,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'lervag/vimtex'
@@ -33,7 +34,9 @@ Plugin 'raimondi/delimitmate'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'rust-lang/rust.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'peterhoeg/vim-qml'
 
 call vundle#end()
 filetype plugin indent on
@@ -276,7 +279,7 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " HTML Indentation
-au BufNewFile,BufRead *.html
+au BufNewFile,BufRead *.html,*.tex
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
