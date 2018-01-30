@@ -2,6 +2,7 @@
 
 sudo apt-get -y install \
 	conky-all \
+	cmake \
 	curl \
 	feh \
 	gem \

@@ -11,6 +11,8 @@
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
   - sudo ./packages.sh
+  - chsh -s $(which zsh)
+  - git config --global core.editor "vim"
   - ./fonts/install.sh
 
 - link:
