@@ -10,8 +10,10 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
-  - sudo ./packages.sh
+  - sudo ./scripts/packages.sh
   - chsh -s $(which zsh)
+  - ./scripts/termite-install.sh
+  - ./scripts/i3-gaps-install.sh
   - git config --global core.editor "vim"
   - ./fonts/install.sh
 

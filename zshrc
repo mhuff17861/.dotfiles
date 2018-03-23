@@ -14,6 +14,7 @@ if ! zgen saved; then
 	zgen oh-my-zsh plugins/git
 	zgen oh-my-zsh plugins/history
 	zgen oh-my-zsh plugins/web-search
+	zgen oh-my-zsh themes/ys
 
 	# NOTE: zsh-syntax-highlighting *must* come before zsh-history-substring
 	# search, else breakage occurs (or so I'm told).
@@ -23,7 +24,7 @@ if ! zgen saved; then
 	zgen load zsh-users/zsh-history-substring-search
 
 	# Use bullet train theme
-	zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+	#zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 	# Generate the init.zsh script
 	zgen save
@@ -34,7 +35,7 @@ fi
 #
 #   - https://github.com/caiogondim/bullet-train.zsh/issues/192
 #
-BULLETTRAIN_PROMPT_ORDER=($(echo ${BULLETTRAIN_PROMPT_ORDER[@]/#%nvm}))
+#BULLETTRAIN_PROMPT_ORDER=($(echo ${BULLETTRAIN_PROMPT_ORDER[@]/#%nvm}))
 
 #----------------------------------------
 # Aliases
