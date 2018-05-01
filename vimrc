@@ -40,17 +40,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'peterhoeg/vim-qml'
 
 call plug#end()
-filetype plugin indent on
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
 
 set t_Co=256
 " All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by
