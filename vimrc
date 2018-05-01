@@ -2,9 +2,6 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -55,12 +52,6 @@ set t_Co=256
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
-if has("syntax")
-  syntax on
-endif
-
 " Python highlighting
 let python_highlight_all=1
 
@@ -108,7 +99,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set hlsearch
 
-filetype plugin on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
