@@ -5,40 +5,41 @@ runtime! debian.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Let Vundle manage itself
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Plugins
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-obsession'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'lervag/vimtex'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdTree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'raimondi/delimitmate'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'rust-lang/rust.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'peterhoeg/vim-qml'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-obsession'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'lervag/vimtex'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdTree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdcommenter'
+Plug 'raimondi/delimitmate'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'rust-lang/rust.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'peterhoeg/vim-qml'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
