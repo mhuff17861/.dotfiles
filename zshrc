@@ -25,6 +25,7 @@ if ! zgen saved; then
 
 	# Use bullet train theme
 	#zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+	zgen load win0err/aphrodite-terminal-theme aphrodite
 
 	# Generate the init.zsh script
 	zgen save
