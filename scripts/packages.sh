@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo apt-get -y install \
-	conky-all \
 	cmake \
 	ctags \
 	curl \

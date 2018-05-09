@@ -10,7 +10,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
-  - sudo ./scripts/packages.sh
+# - sudo ./scripts/packages.sh
   - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
@@ -20,12 +20,8 @@
 - link:
     ~/.zgen: zgen
     ~/.zshrc: zshrc
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.vim: SpaceVim
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.config/i3/config: i3config
 
-- shell:
-  - vim +PlugInstall +qall
-  - ./vim/bundle/YouCompleteMe/install.py --clang-completer

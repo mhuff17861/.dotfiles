@@ -10,3 +10,6 @@
 [submodule "zgen"]
 	path = zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "SpaceVim"]
+	path = SpaceVim
+	url = http://github.com/SpaceVim/SpaceVim
