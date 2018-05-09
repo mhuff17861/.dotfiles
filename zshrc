@@ -46,7 +46,6 @@ alias ll='ls -l --color=auto'
 alias la='ls -la --color=auto'
 alias dirs='dirs -v'
 alias dd='dd status=progress'
-alias tmux='TERM=screen-256color-bce tmux'
 alias c='clear'
 
 function vim() {
@@ -62,4 +61,5 @@ function vim() {
 	/usr/bin/vim -p "${args[@]}"
 }
 
+export TERM='xterm-256color'
 export EDITOR='vim'

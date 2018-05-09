@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get -y install \
+sudo apt install -y \
 	cmake \
 	ctags \
 	curl \
@@ -9,6 +9,7 @@ sudo apt-get -y install \
 	i3 i3-wm i3lock i3status \
 	jq \
 	python-pip python-setuptools \
+  tmux \
 	vim \
 	zsh
 
