@@ -5,4 +5,5 @@ tmux/plugins/*
 tmux/resurrect
 tags*
 termite/
+i3-gaps/
 vte-ng/

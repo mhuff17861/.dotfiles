@@ -10,6 +10,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
+  - mkdir -p ~/.config/termite
 # - sudo ./scripts/packages.sh
 # - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
@@ -25,4 +26,5 @@
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
     ~/.config/i3/config: i3config
+    ~/.config/termite/config: termite.conf
 
