@@ -29,3 +29,11 @@ if ! termite_loc="$(type -p termite)" || [[ -z $termite_loc ]]; then
 
   sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/termite 60
 fi
+
+cd ~/.dotfiles
+if [ -d "vte-ng" ]; then
+  rm -rf vte-ng
+fi
+if [ -d "termite" ]; then
+  rm -rf termite
+fi
