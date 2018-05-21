@@ -47,6 +47,7 @@ alias la='ls -la --color=auto'
 alias dirs='dirs -v'
 alias dd='dd status=progress'
 alias c='clear'
+alias grep='grep --color=auto'
 
 function vim() {
 	args=()

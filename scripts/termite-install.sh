@@ -16,8 +16,18 @@ sudo apt-get install -y \
   gperf
 
 if ! termite_loc="$(type -p termite)" || [[ -z $termite_loc ]]; then
-  git clone --recursive https://github.com/thestinger/termite.git
-  git clone https://github.com/thestinger/vte-ng.git
+  cd $HOME/.dotfiles/repos
+  if [ -d "termite" ]; then
+    cd termite; git pull; cd ..
+  else
+    git clone --recursive https://github.com/thestinger/termite.git
+  fi
+
+  if [ -d "vte-ng" ]; then
+    cd vte-ng; git pull; cd ..
+  else
+    git clone https://github.com/thestinger/vte-ng.git
+  fi
 
   echo export LIBRARY_PATH="/usr/include/gtk-3.0:$LIBRARY_PATH"
   cd vte-ng && ./autogen.sh && make && sudo make install
@@ -28,12 +38,4 @@ if ! termite_loc="$(type -p termite)" || [[ -z $termite_loc ]]; then
     /lib/terminfo/x/xterm-termite
 
   sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/termite 60
-fi
-
-cd ~/.dotfiles
-if [ -d "vte-ng" ]; then
-  rm -rf vte-ng
-fi
-if [ -d "termite" ]; then
-  rm -rf termite
 fi

@@ -4,6 +4,4 @@ tmux/plugins/*
 !tmux/plugins/tpm
 tmux/resurrect
 tags*
-termite/
-i3-gaps/
-vte-ng/
+repos/
