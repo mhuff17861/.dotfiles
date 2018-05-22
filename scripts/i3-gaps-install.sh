@@ -16,7 +16,9 @@ sudo apt install -y \
   libxkbcommon-dev \
   libxkbcommon-x11-dev \
   autoconf \
-  libxcb-xrm-dev
+  libxcb-xrm-dev \
+  i3status \
+  i3lock
 
 if ! i3_loc="$(type -p i3)" || [[ -z $i3_loc ]]; then
   if ! i3 --version | grep -Fq gaps-next
