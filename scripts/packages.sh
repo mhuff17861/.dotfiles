@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### install wanted packages ###
+### install packages ###
 sudo apt install -y \
 	cmake \
 	ctags \
@@ -10,9 +10,8 @@ sudo apt install -y \
 	jq \
 	python-pip python-setuptools \
   tmux \
-	neovim \
 	zsh
 
-#python -m ensurepip --user
-#python -m pip install --user --upgrade pip
-#python -m pip install --user --upgrade virtualenv
+### upgrade pip and install packages ###
+pip3 install --upgrade pip --user
+pip3 install --upgrade neovim --user
