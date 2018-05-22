@@ -23,8 +23,7 @@
 - link:
     ~/.zgen: zgen
     ~/.zshrc: zshrc
-    ~/.vim: SpaceVim
-    ~/.config/nvim/init.vim: SpaceVim/vimrc
+    ~/.config/nvim: SpaceVim
     ~/.SpaceVim.d/init.toml: SpaceVim-init.toml
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
