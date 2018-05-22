@@ -2,28 +2,22 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
 " Plugins
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'easymotion/vim-easymotion'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'lervag/vimtex'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'Syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdTree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -35,6 +29,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'rust-lang/rust.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'peterhoeg/vim-qml'
+Plug 'mhinz/vim-startify'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
 
 call plug#end()
 
@@ -186,6 +183,9 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+
+" remove header from startify
+let g:startify_custom_header =[]
 
 " solve meta key not working
 let c='a'
@@ -340,7 +340,9 @@ map <leader>s? z=
 set path=.,,**
 
 " Sublime-like colorscheme
-colorscheme molokai
+"colorscheme molokai
+
+colorscheme gruvbox
 
 " Other colorscheme setting
 "if has('gui_running')

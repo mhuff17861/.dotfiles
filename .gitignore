@@ -1,6 +1,5 @@
-vim/bundle/*
-!vim/bundle/Vundle.vim
-tmux/plugins/*
+vim/plugged/
+tmux/plugins/
 !tmux/plugins/tpm
 tmux/resurrect
 tags*

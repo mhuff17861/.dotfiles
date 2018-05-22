@@ -49,18 +49,5 @@ alias dd='dd status=progress'
 alias c='clear'
 alias grep='grep --color=auto'
 
-function vim() {
-	args=()
-	for i in $@; do
-		if [[ -h $i ]]; then
-			args+=`readlink $i`
-		else
-			args+=$i
-		fi
-	done
-
-	/usr/bin/nvim -p "${args[@]}"
-}
-
 export TERM='xterm-256color'
 export EDITOR='vim'

@@ -13,7 +13,7 @@
   - mkdir -p ~/.config/termite
   - mkdir -p ~/.config/nvim
   - mkdir -p ~/.dotfiles/repos
-  - mkdir -p ~/.SpaceVim.d
+  - mkdir -p vim/plugged
   - ./scripts/packages.sh
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
@@ -23,8 +23,7 @@
 - link:
     ~/.zgen: zgen
     ~/.zshrc: zshrc
-    ~/.config/nvim: SpaceVim
-    ~/.SpaceVim.d/init.toml: SpaceVim-init.toml
+    ~/.vim: vim
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
