@@ -24,7 +24,7 @@
     ~/.zgen: zgen
     ~/.zshrc: zshrc
     ~/.vim: SpaceVim
-    ~/.SpaceVim.d/init.vim: SpaceVim-init.toml
+    ~/.SpaceVim.d/init.toml: SpaceVim-init.toml
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
