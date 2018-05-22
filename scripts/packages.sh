@@ -10,7 +10,7 @@ sudo apt install -y \
 	jq \
 	python-pip python-setuptools \
   tmux \
-	vim \
+	neovim \
 	zsh
 
 #python -m ensurepip --user

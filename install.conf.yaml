@@ -11,10 +11,10 @@
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
   - mkdir -p ~/.config/termite
+  - mkdir -p ~/.config/nvim
   - mkdir -p ~/.dotfiles/repos
   - mkdir -p ~/.SpaceVim.d
   - sudo ./scripts/packages.sh
-# - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
   - ./scripts/powerline-fonts-install.sh
@@ -24,6 +24,7 @@
     ~/.zgen: zgen
     ~/.zshrc: zshrc
     ~/.vim: SpaceVim
+    ~/.config/nvim/init.vim: SpaceVim/vimrc
     ~/.SpaceVim.d/init.toml: SpaceVim-init.toml
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf

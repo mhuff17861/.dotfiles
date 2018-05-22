@@ -59,7 +59,7 @@ function vim() {
 		fi
 	done
 
-	/usr/bin/vim -p "${args[@]}"
+	/usr/bin/nvim -p "${args[@]}"
 }
 
 export TERM='xterm-256color'
