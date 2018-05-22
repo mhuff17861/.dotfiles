@@ -12,12 +12,12 @@
   - mkdir -p ~/.config/i3
   - mkdir -p ~/.config/termite
   - mkdir -p ~/.dotfiles/repos
-# - sudo ./scripts/packages.sh
+  - sudo ./scripts/packages.sh
 # - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
+  - ./scripts/powerline-fonts-install.sh
   - git config --global core.editor "vim"
-  - ./fonts/install.sh
 
 - link:
     ~/.zgen: zgen

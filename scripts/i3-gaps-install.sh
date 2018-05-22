@@ -18,7 +18,8 @@ sudo apt install -y \
   autoconf \
   libxcb-xrm-dev \
   i3status \
-  i3lock
+  i3lock \
+  dmenu
 
 if ! i3_loc="$(type -p i3)" || [[ -z $i3_loc ]]; then
   if ! i3 --version | grep -Fq gaps-next
