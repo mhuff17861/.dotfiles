@@ -11,7 +11,7 @@
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
   - mkdir -p ~/.config/termite
-  - mkdir ~/.dotfiles/repos
+  - mkdir -p ~/.dotfiles/repos
 # - sudo ./scripts/packages.sh
 # - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
