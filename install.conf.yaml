@@ -12,6 +12,7 @@
   - mkdir -p ~/.config/i3
   - mkdir -p ~/.config/termite
   - mkdir -p ~/.dotfiles/repos
+  - mkdir -p ~/.SpaceVim.d
   - sudo ./scripts/packages.sh
 # - chsh -s $(which zsh)
   - ./scripts/termite-install.sh
@@ -23,6 +24,7 @@
     ~/.zgen: zgen
     ~/.zshrc: zshrc
     ~/.vim: SpaceVim
+    ~/.SpaceVim.d/init.vim: SpaceVim-init.toml
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
