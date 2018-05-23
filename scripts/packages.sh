@@ -6,6 +6,7 @@ sudo apt install -y \
 	ctags \
 	curl \
 	feh \
+	fonts-font-awesome \
 	git \
 	jq \
 	python-pip python-setuptools \
