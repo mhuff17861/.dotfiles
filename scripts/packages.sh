@@ -9,9 +9,5 @@ sudo apt install -y \
 	git \
 	jq \
 	python-pip python-setuptools \
-  tmux \
+	tmux \
 	zsh
-
-### upgrade pip and install packages ###
-pip3 install --upgrade pip --user
-pip3 install --upgrade neovim --user

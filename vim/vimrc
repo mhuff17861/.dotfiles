@@ -16,6 +16,7 @@ Plug 'lervag/vimtex'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
@@ -32,6 +33,9 @@ Plug 'peterhoeg/vim-qml'
 Plug 'mhinz/vim-startify'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -52,26 +56,17 @@ set t_Co=256
 " Python highlighting
 let python_highlight_all=1
 
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
 set background=dark
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
+" Jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
-"set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
-set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
-"set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+set hidden		" Hide buffers when they are abandoned
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -81,18 +76,12 @@ endif
 set spell spelllang=en_us
 set spellfile=~/.vim/spell/en.utf-8.add
 set nospell
-"set guifont=Liberation_Mono_for_Powerline:h9
-" set guifont=FantasqueSans_Medium:h9
 
 set laststatus=2
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-	  let g:airline_symbols = {}
-endif
 
 set nu
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/plugged/ctrlp.vim
 
 set hlsearch
 
@@ -185,7 +174,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
 " remove header from startify
-let g:startify_custom_header =[]
+let g:startify_custom_header = []
 
 " solve meta key not working
 let c='a'
@@ -206,8 +195,6 @@ set so=7
 
 " sudo save to avoid permission denied
 command W w !sudo tee % > /dev/null
-
-set number relativenumber
 
 augroup numbertoggle
   autocmd!
@@ -337,17 +324,22 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
-set path=.,,**
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
-" Sublime-like colorscheme
-"colorscheme molokai
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+set path=.,,**
 
 colorscheme gruvbox
 
-" Other colorscheme setting
-"if has('gui_running')
-"  set background=dark
-"  colorscheme solarized
-"else
-"  colorscheme zenburn
-"endif
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'

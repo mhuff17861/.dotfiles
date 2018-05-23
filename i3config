@@ -203,7 +203,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 for_window [class="^.*"] border pixel 0
 
 gaps inner 10
-gaps outer 2
+gaps outer 0
 #gaps inner all set 20
 #gaps outer current plus 5
 
@@ -312,7 +312,7 @@ bindsym $mod+Shift+p exec google-chrome --app='https://www.radiojavan.com/'
 
 exec unity-settings-daemon &
 exec nm-applet &
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/andrew/Pictures/Wallpapers
+exec --no-startup-id feh --recursive --randomize --bg-fill ~/.dotfiles/wallpapers/*
 exec --no-startup-id conky &
 
 for_window [title="Write:.*" class="Thunderbird"] floating enable
