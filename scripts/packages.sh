@@ -12,5 +12,6 @@ sudo apt install -y \
 	htop \
 	jq \
 	python-pip python-setuptools \
+	ranger \
 	tmux \
 	zsh
