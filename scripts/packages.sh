@@ -3,11 +3,13 @@
 ### install packages ###
 sudo apt install -y \
 	cmake \
+	cmus \
 	ctags \
 	curl \
 	feh \
 	fonts-font-awesome \
 	git \
+	htop \
 	jq \
 	python-pip python-setuptools \
 	tmux \
