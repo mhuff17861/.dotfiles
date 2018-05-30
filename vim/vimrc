@@ -36,6 +36,15 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
@@ -178,11 +187,6 @@ let g:startify_custom_header = []
 
 " solve meta key not working
 let c='a'
-while c <= 'z'
-	exec "set <A-".c.">=\e".c
-	exec "imap \e".c." <A-".c.">"
-	let c = nr2char(1+char2nr(c))
-endw
 set timeout ttimeoutlen=50
 
 let mapleader = ","

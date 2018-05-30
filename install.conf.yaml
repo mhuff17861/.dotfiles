@@ -10,6 +10,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - mkdir -p ~/.config/i3
+  - mkdir -p ~/.config/nvim
   - mkdir -p ~/.config/termite
   - mkdir -p ~/.dotfiles/repos
   - mkdir -p vim/plugged
@@ -17,12 +18,14 @@
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
   - ./scripts/powerline-fonts-install.sh
-  - git config --global core.editor "vim"
+  - git config --global core.editor "nvim"
 
 - link:
     ~/.zgen: zgen
     ~/.zshrc: zshrc
     ~/.vim: vim
+    ~/.config/nvim: vim
+    ~/.config/nvim/init.vim: vim/vimrc
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local

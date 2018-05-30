@@ -11,6 +11,7 @@ sudo apt install -y \
 	git \
 	htop \
 	jq \
+	neovim \
 	python-pip python-setuptools \
 	ranger \
 	tmux \
