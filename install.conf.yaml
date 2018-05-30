@@ -23,9 +23,7 @@
 - link:
     ~/.zgen: zgen
     ~/.zshrc: zshrc
-    ~/.vim: vim
-    ~/.config/nvim: vim
-    ~/.config/nvim/init.vim: vim/vimrc
+    ~/.config/nvim: nvim
     ~/.cache/dein/repos/github.com/Shougo/dein.vim: dein.vim
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
