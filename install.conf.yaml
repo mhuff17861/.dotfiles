@@ -13,7 +13,7 @@
   - mkdir -p ~/.config/nvim
   - mkdir -p ~/.config/termite
   - mkdir -p ~/.dotfiles/repos
-  - mkdir -p vim/plugged
+  - mkdir -p ~/.cache/dein/repos/github.com/Shougo
   - ./scripts/packages.sh
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
@@ -26,6 +26,7 @@
     ~/.vim: vim
     ~/.config/nvim: vim
     ~/.config/nvim/init.vim: vim/vimrc
+    ~/.cache/dein/repos/github.com/Shougo/dein.vim: dein.vim
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local

@@ -10,3 +10,6 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = http://github.com/gpakosz/.tmux
+[submodule "dein.vim"]
+	path = dein.vim
+	url = https://github.com/Shougo/dein.vim

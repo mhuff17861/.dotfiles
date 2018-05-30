@@ -1,52 +1,58 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
-
-call plug#begin('~/.vim/plugged')
-
-" Plugins
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-obsession'
-Plug 'easymotion/vim-easymotion'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'lervag/vimtex'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
-Plug 'scrooloose/nerdTree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdcommenter'
-Plug 'raimondi/delimitmate'
-Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'rust-lang/rust.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'peterhoeg/vim-qml'
-Plug 'mhinz/vim-startify'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'haya14busa/incsearch.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+if &compatible
+ set nocompatible
 endif
-let g:deoplete#enable_at_startup = 1
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call plug#end()
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  call dein#add('~/.cache/dein')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-obsession')
+  call dein#add('easymotion/vim-easymotion')
+  call dein#add('ludovicchabant/vim-gutentags')
+  call dein#add('vim-scripts/indentpython.vim')
+  call dein#add('jmcantrell/vim-virtualenv')
+  call dein#add('lervag/vimtex')
+  call dein#add('jlanzarotta/bufexplorer')
+  call dein#add('kien/ctrlp.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('junegunn/gv.vim')
+  call dein#add('airblade/vim-gitgutter')
+  call dein#add('vim-syntastic/syntastic')
+  call dein#add('nvie/vim-flake8')
+  call dein#add('scrooloose/nerdTree')
+  call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('raimondi/delimitmate')
+  call dein#add('maxbrunsfeld/vim-yankstack')
+  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('christoomey/vim-tmux-navigator')
+  call dein#add('rust-lang/rust.vim')
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('peterhoeg/vim-qml')
+  call dein#add('mhinz/vim-startify')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/vimfiler.vim')
+  call dein#add('shinchu/lightline-gruvbox.vim')
+  call dein#add('haya14busa/incsearch.vim')
+  call dein#add('sheerun/vim-polyglot')
+  call dein#add('w0rp/ale')
+  let g:deoplete#enable_at_startup = 1
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
 
 set t_Co=256
 " All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by

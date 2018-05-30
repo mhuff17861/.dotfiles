@@ -48,6 +48,7 @@ alias dirs='dirs -v'
 alias dd='dd status=progress'
 alias c='clear'
 alias grep='grep --color=auto'
+alias vim='nvim'
 
 export TERM='xterm-256color'
-export EDITOR='vim'
+export EDITOR='nvim'
