@@ -18,16 +18,16 @@ What's Included?
 ----------------
 ### Applications
 - cmus
-- feh
-- fzf
+- feh: for setting background in i3
+- [fzf](https://github.com/junegunn/fzf)
 - htop
-- i3-gaps
-- neovim
+- [i3-gaps](https://github.com/Airblader/i3): Fork of i3 window manager with gaps support
+- [neovim](https://github.com/neovim/neovim): vim but better, "new" vim
 - pip
-- ranger
+- ranger: cli file manager
 - tmux
-- termite
-- zsh
+- [termite](https://github.com/thestinger/termite)
+- zsh with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), powered by [zgen](https://github.com/tarjoilija/zgen)
 
 ### Vim Plugins
 I use neovim, not vim. However, I alias vim to nvim in my zshrc so you can still just type 'vim' to edit files.
