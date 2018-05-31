@@ -16,7 +16,7 @@ I don't currently have it setup to work for storing the repo wherever you want, 
 
 What's Included?
 ----------------
-#### Applications
+### Applications
 - cmus
 - feh
 - fzf
@@ -29,7 +29,7 @@ What's Included?
 - termite
 - zsh
 
-#### Vim Plugins
+### Vim Plugins
 I use neovim, not vim. However, I alias vim to nvim in my zshrc so you can still just type 'vim' to edit files.
 The following plugins are included:
 - [ALE](https://github.com/w0rp/ale)
