@@ -7,8 +7,7 @@ Installation
 
 To install, run the following:
 ```console
-cd ~
-git clone https://github.com/solsaver/.dotfiles
+git clone https://github.com/solsaver/.dotfiles ~/.dotfiles
 cd .dotfiles
 ./install
 ```
