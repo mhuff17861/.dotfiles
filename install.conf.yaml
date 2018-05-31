@@ -17,6 +17,7 @@
   - ./scripts/packages.sh
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
+  - ./scripts/fzf-install.sh
   - ./scripts/powerline-fonts-install.sh
   - git config --global core.editor "nvim"
 

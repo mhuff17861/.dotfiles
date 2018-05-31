@@ -52,3 +52,5 @@ alias vim='nvim'
 
 export TERM='xterm-256color'
 export EDITOR='nvim'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

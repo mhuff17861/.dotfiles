@@ -1,3 +1,4 @@
+" Setup dein and install plugins
 if &compatible
 	set nocompatible
 endif
@@ -23,8 +24,9 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('jmcantrell/vim-virtualenv')
 	call dein#add('lervag/vimtex')
 	call dein#add('jlanzarotta/bufexplorer')
-	call dein#add('kien/ctrlp.vim')
 	call dein#add('tpope/vim-fugitive')
+  call dein#add('~/.fzf')
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 	call dein#add('junegunn/gv.vim')
 	call dein#add('airblade/vim-gitgutter')
 	call dein#add('vim-syntastic/syntastic')

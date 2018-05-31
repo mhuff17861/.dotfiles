@@ -1,5 +1,4 @@
 source ~/.config/nvim/plugins.vim
-
 set t_Co=256
 
 " Python highlighting
@@ -9,7 +8,7 @@ set background=dark
 
 " Jump to the last position when reopening a file
 if has("autocmd")
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 set showcmd		" Show (partial) command in status line.
@@ -33,8 +32,8 @@ set ignorecase
 set smartcase
 
 try
-	set undodir=~/.vim_runtime/temp_dirs/undodir
-	set undofile
+  set undodir=~/.vim_runtime/temp_dirs/undodir
+  set undofile
 catch
 endtry
 
@@ -76,9 +75,9 @@ set nu
 " Relative numbers when not in insert mode,
 " normal line numbers when in insert mode
 augroup numbertoggle
-	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 " Configure backspace so it acts as it should act
@@ -95,9 +94,6 @@ set nobackup
 set nowb
 set noswapfile
 
-" Use spaces instead of tabs
-set noexpandtab
-
 " Be smart when using tabs
 set smarttab
 
@@ -105,6 +101,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Use spaces instead of tabs
+set expandtab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -114,19 +112,19 @@ set clipboard=unnamed
 
 " python PEP8 indentation standards
 au BufNewFile,BufRead *.py
-			\ set tabstop=4 |
-			\ set softtabstop=4 |
-			\ set shiftwidth=4 |
-			\ set textwidth=79 |
-			\ set expandtab |
-			\ set autoindent |
-			\ set fileformat=unix
+      \ set tabstop=4 |
+      \ set softtabstop=4 |
+      \ set shiftwidth=4 |
+      \ set textwidth=79 |
+      \ set expandtab |
+      \ set autoindent |
+      \ set fileformat=unix
 
 " 2 space tab indentation
 au BufNewFile,BufRead *.html,*.tex,*.vim
-			\ set tabstop=2 |
-			\ set softtabstop=2 |
-			\ set shiftwidth=2
+      \ set tabstop=2 |
+      \ set softtabstop=2 |
+      \ set shiftwidth=2
 
 " Highlight unecessary whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -172,16 +170,16 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers
 try
-	set switchbuf=useopen,usetab,newtab
-	set stal=2
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
 catch
 endtry
 
 " Delete trailing white space on save
 func! DeleteTrailingWS()
-	exe "normal mz"
-	%s/\s\+$//e
-	exe "normal `z"
+  exe "normal mz"
+  %s/\s\+$//e
+  exe "normal `z"
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
