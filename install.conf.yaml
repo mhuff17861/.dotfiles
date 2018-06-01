@@ -9,9 +9,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - mkdir -p ~/.config/i3
-  - mkdir -p ~/.config/nvim
-  - mkdir -p ~/.config/termite
   - mkdir -p ~/.dotfiles/repos
   - mkdir -p ~/.cache/dein/repos/github.com/Shougo
   - ./scripts/packages.sh
@@ -29,6 +26,8 @@
     ~/.tmux: .tmux
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
-    ~/.config/i3/config: i3config
-    ~/.config/termite/config: termite.conf
+    ~/.config/i3: i3
+    ~/.config/i3blocks: i3blocks
+    ~/.config/i3status: i3status
+    ~/.config/termite: termite
 
