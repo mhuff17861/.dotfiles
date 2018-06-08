@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo -E add-apt-repository ppa:aguignard/ppa
+sudo apt-get update
+
 sudo apt install -y \
   libxcb1-dev \
   libxcb-keysyms1-dev \
@@ -8,7 +11,7 @@ sudo apt install -y \
   libxcb-icccm4-dev \
   libyajl-dev \
   libstartup-notification0-dev \
-  libxcb-randr0-dev \
+  libxcb* \
   libev-dev \
   libxcb-cursor-dev \
   libxcb-xinerama0-dev \
@@ -16,10 +19,12 @@ sudo apt install -y \
   libxkbcommon-dev \
   libxkbcommon-x11-dev \
   autoconf \
-  libxcb-xrm-dev \
   i3status \
   i3lock \
-  dmenu
+  dmenu \
+  libstartup-notification0 \
+  libstartup-notification0-dev \
+  libxcb-xrm-dev
 
 if ! i3 --version | grep -Fq gaps-next
 then
