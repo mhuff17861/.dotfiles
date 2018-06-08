@@ -1,5 +1,5 @@
 [options]
-font = DejaVu Sans Mono for Powerline
+font = DejaVu Sans Mono for Powerline 14
 resize_grip         = false
 scroll_on_output    = false
 scroll_on_keystroke = true
