@@ -20,4 +20,6 @@ sudo apt install -y \
 	python-pip python-setuptools \
 	ranger \
 	tmux \
-	zsh
+	zsh \
+  compton \
+  firefox
