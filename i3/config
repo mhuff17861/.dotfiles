@@ -168,7 +168,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #change wallpaper
-bindsym $mod+Shift+w exec feh --recursive --randomize --bg-fill ~/Pictures/Wallpapers/*
+bindsym $mod+Shift+w exec feh --recursive --randomize --bg-fill ~/.dotfiles/wallpapers/*
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -285,7 +285,7 @@ bindsym $mod+f exec firefox
 
 exec unity-settings-daemon &
 exec nm-applet &
-exec --no-startup-id feh --recursive --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec --no-startup-id feh --recursive --randomize --bg-fill ~/.dotfiles/wallpapers/*
 exec --no-startup-id conky &
 
 #enable transparency and smoothing for termite
