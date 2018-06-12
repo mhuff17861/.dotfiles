@@ -1,3 +1,8 @@
+Note
+--------
+This repo was forked from [solsaver's repo] (https://github.com/solsaver/dotfiles) so that I could make my own adjustments to 
+their setup. Solsaver gets the majority of the credit for what is in this repo, as I am merely building on top of it.
+
 General
 -------
 My dotfiles, bootstrapped and automated with [dotbot](https://github.com/anishathalye/dotbot). This repo is currently only setup for debian-based environments, and most of the installation scripting will fail on other machines. I plan on making it compatible for Arch eventually.
