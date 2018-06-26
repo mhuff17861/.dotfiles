@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git config --global url.https://github.com/.insteadOf git://github.com/
-
 sudo apt-get install -y \
   git \
   g++ \

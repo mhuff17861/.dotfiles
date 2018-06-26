@@ -19,7 +19,6 @@ sudo apt install -y \
 	neovim \
 	python-pip python-setuptools \
 	ranger \
-	tmux \
 	zsh \
   compton \
   firefox

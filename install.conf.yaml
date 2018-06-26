@@ -12,6 +12,8 @@
   - mkdir -p ~/.dotfiles/repos
   - mkdir -p ~/.cache/dein/repos/github.com/Shougo
   - ./scripts/packages.sh
+  - git config --global url.https://github.com/.insteadOf git://github.com/
+  - ./scripts/tmux-install.sh
   - ./scripts/termite-install.sh
   - ./scripts/i3-gaps-install.sh
   - ./scripts/fzf-install.sh
