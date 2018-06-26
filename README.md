@@ -1,7 +1,3 @@
-TODO
-------
- * Setup tmux to build from source, apt likes to install 2.1 and that sucks. See tmp for basics to build script
-
 Note
 --------
 This repo was forked from [solsaver's repo](https://github.com/solsaver/dotfiles) so that I could make my own adjustments to
