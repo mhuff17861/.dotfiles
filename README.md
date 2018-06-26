@@ -1,7 +1,7 @@
 Note
 --------
-This repo was forked from [solsaver's repo](https://github.com/solsaver/dotfiles) so that I could make my own adjustments to
-their setup. Solsaver gets the majority of the credit for what is in this repo, as I am merely building on top of it.
+This repo was forked from [Andrew Lang's repo](https://gitlab.com/pksol/dotfiles) so that I could make my own adjustments to
+their setup. Andrew gets the majority of the credit for what is in this repo, as I am merely building on top of it.
 
 General
 -------
