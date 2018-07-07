@@ -5,7 +5,7 @@ their setup. Andrew gets the majority of the credit for what is in this repo, as
 
 General
 -------
-My dotfiles, bootstrapped and automated with [dotbot](https://github.com/anishathalye/dotbot). This repo is currently only setup for debian-based environments, and most of the installation scripting will fail on other machines. I plan on making it compatible for Arch eventually.
+My dotfiles, bootstrapped and automated with [dotbot](https://github.com/anishathalye/dotbot). This repo is currently only setup for debian-based environments, and most of the installation scripting will fail on other machines.
 
 Installation
 ------------
